@@ -1,9 +1,8 @@
 package com.kuanhsien.app.sample.android_activity_trace_demo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : LoggerActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
