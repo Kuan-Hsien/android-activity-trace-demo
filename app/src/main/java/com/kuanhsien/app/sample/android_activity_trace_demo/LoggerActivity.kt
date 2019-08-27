@@ -12,13 +12,13 @@ const val TAG_ACTIVITY_LOG = "[ActivityLog]"
 
 abstract class LoggerActivity : AppCompatActivity() {
 
-    private val TAG = this.javaClass.simpleName
+    private val tag = this.javaClass.simpleName
 
     /**
      * Log
      */
     fun logger(log: String) {
-        Log.d(TAG_ACTIVITY_LOG,  "[$TAG] taskID = $taskId, activity = $this, log = $log")
+        Log.d(TAG_ACTIVITY_LOG,  "[$tag] taskID = $taskId, activity = $this, log = $log")
     }
 
     // lifecycle
@@ -80,6 +80,18 @@ abstract class LoggerActivity : AppCompatActivity() {
         super.onConfigurationChanged(newConfig)
     }
 
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        logger("onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)")
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int,
+                                            permissions: Array<String>,
+                                            grantResults: IntArray) {
+        logger("onRequestPermissionsResult(requestCode, permissions, grantResults)")
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
 
 
 

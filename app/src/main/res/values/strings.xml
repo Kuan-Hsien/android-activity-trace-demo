@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">android-activity-trace-demo</string>
+    <string name="btn_show_custom_dialog">Show Custom Dialog</string>
+    <string name="btn_show_request_permission_dialog">Show Request Permission Dialog</string>
 </resources>
