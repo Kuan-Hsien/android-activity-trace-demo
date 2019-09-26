@@ -32,7 +32,7 @@ abstract class BaseActivity : LoggerActivity() {
 //        } else {
 //            Log.d(TAG_ACTIVITY_LOG,  "[$tag] NavUtils.navigateUpTo")
 //
-//            // 這個 activity 是這個app任務的一部分, 所以
+//            // 這個 activity 是這個 app 任務的一部分, 所以
 //            // 向上導航到 parent activity.
 //            NavUtils.navigateUpTo(this, upIntent)
 //        }

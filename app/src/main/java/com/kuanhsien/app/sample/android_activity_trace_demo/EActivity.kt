@@ -28,7 +28,9 @@ class EActivity : BaseActivity() {
         // Start Specific Page
         btn_start_specific_page.setOnClickListener {
             Log.d(TAG_ACTIVITY_LOG,  "[$tag] Start specific activity.")
-            startActivity(Intent(this, CActivity::class.java))
+            val intent = Intent(this, CActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
         }
         btn_start_specific_page.text = getString(R.string.button_goto_C)
     }
