@@ -11,6 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,6 +20,32 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".BActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".CActivity"
+            android:parentActivityName=".BActivity" />
+
+        <activity
+            android:name=".DActivity"
+            android:parentActivityName=".CActivity" />
+
+        <activity
+            android:name=".EActivity"
+            android:parentActivityName=".DActivity" />
+
+        <activity
+            android:name=".FActivity"
+            android:parentActivityName=".BActivity" />
+
+        <activity
+            android:name=".GActivity"
+            android:parentActivityName=".FActivity" />
+
+
     </application>
 
 </manifest>

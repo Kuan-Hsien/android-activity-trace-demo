@@ -1,6 +1,7 @@
 package com.kuanhsien.app.sample.android_activity_trace_demo
 
 import android.Manifest.permission.ACCESS_FINE_LOCATION
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
@@ -23,6 +24,11 @@ class MainActivity : LoggerActivity() {
         // [Demo 2] Activity lifecycle when a system dialog is shown.
         btn_show_system_dialog.setOnClickListener {
             showRequestPermissionDialog()
+        }
+
+        // [Demo 3] Switch Activities
+        btn_switch_activity.setOnClickListener {
+            startActivity(Intent(this, BActivity::class.java))
         }
     }
 
